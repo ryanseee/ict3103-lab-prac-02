@@ -11,7 +11,7 @@ pipeline {
 			script {
 				def scannerHome = tool 'SonarQube'
 				withSonarQubeEnv() {
-					sh "${tool("SonarQube")}/bin/sonar-scanner \
+					sh "${scannerHome}/bin/sonar-scanner \
 					-Dsonar.projectKey=ict3103-labPrac-02 \
 					-Dsonar.sources=. \
 					-Dsonar.host.url=http://47.254.255.197:9000 \
